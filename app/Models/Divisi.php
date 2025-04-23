@@ -1,3 +1,5 @@
+<?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -18,4 +20,11 @@ class Divisi extends Model
     {
         return $this->hasMany(Anggota::class, 'id_divisi', 'id_divisi');
     }
+
+    // Relasi dengan Kegiatan
+public function kegiatan()
+{
+    return $this->hasMany(Kegiatan::class, 'id_divisi', 'id_divisi');
+}
+
 }

@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
             AkunPenggunaSeeder::class,
             DivisiSeeder::class,
             AnggotaSeeder::class,
+            KegiatanSeeder::class,
+            KehadiranSeeder::class,
+            DokumentasiSeeder::class, 
+            KeuanganSeeder::class,
         ]);
     }
 }
