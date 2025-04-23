@@ -14,3 +14,6 @@ Route::get('/ketuaDashboard', function () {
    return view('ketua.landingpage');
 })->name('LandingPage');
 
+Route::get('/daftarAnggota', function () {
+   return view('ketua.Anggota');
+})->name('daftarAnggota');
