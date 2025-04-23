@@ -19,6 +19,7 @@
       <div class="p-6">
         @yield('content')
       </div>
+      
     </main>
   </div>
 
