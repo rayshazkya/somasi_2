@@ -67,12 +67,11 @@
   </div>
   <div class="flex items-center justify-between">
     <p class="text-sm font-semibold text-gray-400">SOMASI</p>
-    <form method="POST" action="/logout">
-      @csrf
-      <button type="submit" class="text-pink-500 text-sm hover:underline">Keluar</button>
-    </form>
+    <a href="/LandingPage" class="text-pink-500 text-sm hover:underline">
+      Keluar
+    </a>
   </div>
 </div>
 
 
-  @endsection
+ @endsection

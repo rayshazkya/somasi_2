@@ -7,7 +7,7 @@
       <svg class="h-5 w-5 mr-2" ...>...</svg>
       Dashboard
     </a>
-    <a href="#" @click="active = 'Anggota'" 
+    <a href="/Anggota" @click="active = 'Anggota'" 
        :class="active === 'Anggota' ? 'text-indigo-600 font-semibold' : 'text-gray-700 hover:text-indigo-600'" 
        class="flex items-center">
       <svg class="h-5 w-5 mr-2" ...>...</svg>

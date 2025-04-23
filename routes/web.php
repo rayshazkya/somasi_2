@@ -9,3 +9,8 @@ Route::get('/ketuaDashboard', function () {
  Route::get('/ketuaProfile', function () {
     return view('ketua.profile');
  })->name('profile');
+
+ Route::get('/LandingPage', function () {
+   return view('ketua.landingpage');
+})->name('LandingPage');
+
