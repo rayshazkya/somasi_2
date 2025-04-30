@@ -14,22 +14,22 @@
         <div class="w-full md:w-1/2 flex flex-col justify-center items-center px-6 md:px-16 lg:px-24">
             <div class="w-full max-w-md">
                 <!-- Logo -->
-                <div class="mb-8">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-12">
-                </div>
+                <div class="text-center">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-16 mx-auto mb-8">
 
-                <!-- Welcome Text -->
-                <h1 class="text-3xl font-bold text-navy-900 mb-2">Selamat Datang!!</h1>
-                <p class="text-gray-600 mb-8">Masukkan data kamu untuk masuk</p>
+                    <!-- Welcome Text -->
+                    <h1 class="text-3xl font-bold text-navy-900 mb-2">Selamat Datang!!</h1>
+                    <p class="text-gray-600 mb-8">Masukkan data kamu untuk masuk</p>
+                </div>
 
                 <!-- Login Form -->
 
 
                 <!-- NPM Field id="npm" type="text" name="npm" placeholder="NPM"-->
                 <div class="mb-4">
-                    <input
+                    <input placeholder="NPM"
                         class="w-full px-4 py-3 rounded-lg shadow-sm border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
-                        required autofocus>
+                        required>
                 </div>
 
                 <!-- Password Field id="password" type="password" name="password"-->
@@ -62,7 +62,7 @@
             class="hidden md:flex md:w-1/2 bg-gradient-to-b from-blue-600 to-white flex-col justify-center items-center text-white px-12">
             <div class="text-center">
                 <!-- White Logo -->
-                <img src="{{ asset('images/logo-white.png') }}" alt="Logo" class="h-16 mx-auto mb-8">
+                <img src="{{ asset('images/logo-putih.png') }}" alt="Logo" class="h-16 mx-auto mb-8">
 
                 <!-- SOMASI Text -->
                 <h2 class="text-5xl font-bold mb-6">SOMASI</h2>

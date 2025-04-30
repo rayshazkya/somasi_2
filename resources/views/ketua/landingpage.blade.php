@@ -34,68 +34,141 @@
     <section id="beranda" class="py-16 px-4 max-w-7xl mx-auto">
         <div class="flex flex-col-reverse md:flex-row items-center md:justify-between gap-10">
             <div class="md:w-1/2 text-center md:text-left">
-                <p class="text-xs text-blue-500 mb-2">Selamat Datang Mahasiswa!</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4 leading-snug">SOMASI<br>Sistem Organisasi
+                <div class="inline-block bg-white rounded-lg px-4 py-2 mb-4">
+                        <p class="text-blue-600">Selamat Datang Mahasiswa!</p>
+                    </div>
+                <h1 class="text-4xl md:text-4xl font-bold text-blue-900 mb-4 leading-snug">SOMASI</h1>
+                <h2 class="text-4xl md:text-4xl font-bold text-black-900 mb-4 leading-snug">Sistem Organisasi
                     Mahasiswa</h2>
-                <a href="#"
-                    class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 text-sm">Pelajari
-                    Selengkapnya</a>
+                <a href="/login"
+                    class="bg-[#2a4de8] text-white px-5 py-2.5 rounded-md font-semibold hover:bg-[#1f3dbf] transition">
+                    Masuk
+                </a>
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <img src="header.png" alt="Ilustrasi Mahasiswa" class="w-80 md:w-full" />
+                <img src="images/header.png" alt="Ilustrasi Mahasiswa" class="w-80 md:w-full" />
+            </div>
+        </div>
+    </section>
+    
+    <div class="py-16 md:py-24"></div>
+
+    <!-- Tentang SOMASI -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <!-- Judul Tentang SOMASI -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-blue-50 rounded-lg px-6 py-2 shadow-md">
+                    <p class="text-blue-600 font-medium">Tentang SOMASI</p>
+                </div>
+            </div>
+            
+            <!-- Heading Utama -->
+            <h2 class="text-center text-black-800 font-bold text-5xl md:text-6xl mb-8">Sistem Organisasi Mahasiswa</h2>
+            
+            <!-- Deskripsi -->
+            <p class="text-center text-gray-600 max-w-5xl mx-auto mb-20 leading-relaxed">
+                SOMASI (Sistem Organisasi Mahasiswa) adalah platform web untuk organisasi mahasiswa, yang 
+                mempermudah pengelolaan anggota, keuangan, kegiatan, dan dokumentasi secara efisien dan transparan. 
+                Dengan sistem ini, seluruh pengurus dan anggota dapat saling terhubung dalam satu platform yang modern 
+                dan mudah digunakan.
+            </p>
+            
+            <!-- Fitur-fitur -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Fitur 1 -->
+                <div class="text-center">
+                    <img src="{{ asset('images/icon1.png') }}" alt="Login" class="h-48 mx-auto mb-6">
+                    <h3 class="text-blue-900 font-semibold text-xl mb-4">Cukup Sekali Login</h3>
+                    <p class="text-gray-600 px-4">
+                        Masuk ke sistem menggunakan akun mahasiswa. Tidak perlu login ulang untuk tiap fitur.
+                    </p>
+                </div>
+                
+                <!-- Fitur 2 -->
+                <div class="text-center">
+                    <img src="{{ asset('images/icon2.png') }}" alt="Organisasi" class="h-48 mx-auto mb-6">
+                    <h3 class="text-blue-900 font-semibold text-xl mb-4">Kelola Organisasimu</h3>
+                    <p class="text-gray-600 px-4">
+                        Pilih organisasi dan peranmu. Mulai kelola anggota, keuangan, kegiatan, dan dokumentasi.
+                    </p>
+                </div>
+                
+                <!-- Fitur 3 -->
+                <div class="text-center">
+                    <img src="{{ asset('images/icon3.png') }}" alt="Kolaborasi" class="h-48 mx-auto mb-6">
+                    <h3 class="text-blue-900 font-semibold text-xl mb-4">Bebas Berkolaborasi</h3>
+                    <p class="text-gray-600 px-4">
+                        Koordinasikan tugas, pantau progres, dan dokumentasi kegiatan secara real-time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="py-16 md:py-24"></div>
+
+    <!-- Form Section -->
+    <section id="daftar" class="py-16 md:py-24 bg-blue-50 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative">
+            <div class="flex flex-col md:flex-row items-center md:items-start">
+                <!-- Bagian teks di sebelah kiri -->
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12 md:pt-16 text-center">
+                    <h2 class="text-blue-700 font-bold text-3xl md:text-4xl mb-4">Kami sangat menghargai partisipasimu disini!</h2>
+                    <p class="text-gray-600 text-lg">
+                        Silahkan isi formulir pendaftaran anggota dan tunggu informasi selanjutnya
+                    </p>
+                </div>
+                
+                <!-- Bagian form di sebelah kanan -->
+                <div class="md:w-1/2 w-full">
+                    <form class="space-y-6 max-w-lg mx-auto md:mx-0">
+                        <div>
+                            <input type="text" name="nama" placeholder="Masukkan Nama" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <input type="text" name="npm" placeholder="Masukkan NPM" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <input type="text" name="telepon" placeholder="Masukkan Nomor HP" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Masukkan Email" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <select name="divisi" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-400" required>
+                                <option value="" selected disabled>Pilihan Divisi Yang Diminati</option>
+                                <option value="ppm">Penelitian dan Pengembangan Mahasiswa (PPM)</option>
+                                <option value="kominkraf">Komunikasi, Informasi dan Perencanaan Kreativitas (KOMINKRAF)</option>
+                                <option value="mba">Minat Bakat dan Apresiasi (MBA)</option>
+                                <option value="hual">Hubungan Antar Lembaga (HUAL)</option>
+                                <option value="pkm">Pengelolaan Kesejahteraan Mahasiswa (PKM)</option>
+                                <option value="adm">ADM dan Inventaris</option>
+                                <option value="agama">Keagamaan</option>
+                                <option value="sosmas">Sosial Masyarakat (SOSMAS)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea name="alasan" placeholder="Alasan Ingin Bergabung" rows="3" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-40 bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800 font-medium">Kirim</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Tentang SOMASI -->
-    <section id="about" class="max-w-4xl mx-auto px-4 py-12 text-center">
-        <h3 class="text-xl font-semibold mb-4">Sistem Organisasi Mahasiswa</h3>
-        <p class="text-gray-600">SOMASI adalah platform web untuk organisasi mahasiswa yang mempermudah pengelolaan
-            anggota, keuangan, kegiatan, dan dokumentasi secara efisien dan transparan.</p>
-    </section>
-
-    <!-- Fitur Section -->
-    <section class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 py-10 text-center">
-        <div>
-            <img src="icon1.png" alt="Login" class="mx-auto mb-4" />
-            <h4 class="font-semibold text-blue-800 mb-2">Cukup Sekali Login</h4>
-            <p class="text-sm text-gray-600">Masuk ke sistem menggunakan akun mahasiswa. Tidak perlu ulang login untuk
-                tiap fitur.</p>
-        </div>
-        <div>
-            <img src="icon2.png" alt="Organisasi" class="mx-auto mb-4" />
-            <h4 class="font-semibold text-blue-800 mb-2">Kelola Organisasimu</h4>
-            <p class="text-sm text-gray-600">Pengurus dapat mengelola keuangan, kegiatan, dan dokumen organisasi.</p>
-        </div>
-        <div>
-            <img src="icon3.png" alt="Kolaborasi" class="mx-auto mb-4" />
-            <h4 class="font-semibold text-blue-800 mb-2">Bebas Berkolaborasi</h4>
-            <p class="text-sm text-gray-600">Koordinasikan tugas, pantau progres, dan susun laporan secara real-time.
-            </p>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section id="daftar" class="bg-blue-100 py-12 px-4">
-        <div class="max-w-xl mx-auto text-center">
-            <h4 class="text-lg font-semibold mb-2">Kami sangat menghargai partisipasimu di sini!</h4>
-            <p class="text-sm text-gray-600 mb-6">Silahkan isi formulir pendaftaran anggota dan tunggu informasi
-                selanjutnya.</p>
-            <form class="space-y-4">
-                <input type="text" placeholder="Masukkan Nama" class="w-full p-2 border border-gray-300 rounded">
-                <input type="text" placeholder="Masukkan NIM" class="w-full p-2 border border-gray-300 rounded">
-                <input type="text" placeholder="Masukkan No HP" class="w-full p-2 border border-gray-300 rounded">
-                <input type="email" placeholder="Masukkan Email" class="w-full p-2 border border-gray-300 rounded">
-                <input type="text" placeholder="Alasan Ingin Bergabung"
-                    class="w-full p-2 border border-gray-300 rounded">
-                <button class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Kirim</button>
-            </form>
-        </div>
-    </section>
-
+    <div class="py-16 md:py-24"></div>
+    
     <!-- FAQ Section -->
     <section id="faq" class="max-w-5xl mx-auto py-12 px-4">
-        <h4 class="text-center text-sm text-blue-500 mb-4">Frequently Ask Question</h4>
+        <div class="flex justify-center mb-8">
+            <div class="bg-blue-50 rounded-lg px-6 py-2 shadow-md">
+                <p class="text-blue-600 font-medium">Frequently Ask Question</p>
+            </div>
+        </div>
         <div class="grid md:grid-cols-2 gap-6">
             <div class="bg-white shadow-md rounded p-6">
                 <h5 class="font-semibold mb-2">Siapa yang bisa menggunakan SOMASI?</h5>
