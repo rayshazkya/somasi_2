@@ -31,7 +31,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="beranda" class="py-16 px-4 max-w-7xl mx-auto">
+    <section class="py-16 px-4 max-w-7xl mx-auto">
         <div class="flex flex-col-reverse md:flex-row items-center md:justify-between gap-10">
             <div class="md:w-1/2 text-center md:text-left">
                 <div class="inline-block bg-white rounded-lg px-4 py-2 mb-4">
@@ -50,21 +50,19 @@
             </div>
         </div>
     </section>
-    
-    <div class="py-16 md:py-24"></div>
 
     <!-- Tentang SOMASI -->
-    <section id="about" class="py-16 md:py-24">
+    <section id="about" class="py-10 md:py-20">
         <div class="container mx-auto px-4">
             <!-- Judul Tentang SOMASI -->
             <div class="flex justify-center mb-8">
                 <div class="bg-blue-50 rounded-lg px-6 py-2 shadow-md">
-                    <p class="text-blue-600 font-medium">Tentang SOMASI</p>
+                    <p class="text-blue-700 font-medium">Tentang SOMASI</p>
                 </div>
             </div>
             
             <!-- Heading Utama -->
-            <h2 class="text-center text-black-800 font-bold text-5xl md:text-6xl mb-8">Sistem Organisasi Mahasiswa</h2>
+            <h2 class="text-center text-black-900 font-bold text-3xl mb-4">Sistem Organisasi Mahasiswa</h2>
             
             <!-- Deskripsi -->
             <p class="text-center text-gray-600 max-w-5xl mx-auto mb-20 leading-relaxed">
@@ -105,11 +103,9 @@
             </div>
         </div>
     </section>
-    
-    <div class="py-16 md:py-24"></div>
 
     <!-- Form Section -->
-    <section id="daftar" class="py-16 md:py-24 bg-blue-50 relative overflow-hidden">
+    <section id="daftar" class="py-12 md:py-24 bg-blue-50 relative overflow-hidden">
         <div class="container mx-auto px-4 relative">
             <div class="flex flex-col md:flex-row items-center md:items-start">
                 <!-- Bagian teks di sebelah kiri -->
@@ -159,8 +155,6 @@
             </div>
         </div>
     </section>
-
-    <div class="py-16 md:py-24"></div>
     
     <!-- FAQ Section -->
     <section id="faq" class="max-w-5xl mx-auto py-12 px-4">

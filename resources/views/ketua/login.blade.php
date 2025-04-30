@@ -41,7 +41,7 @@
 
                 <!-- Forgot Password Link -->
                 <div class="mb-6">
-                    {{-- <a href="{{ route('password.request') }}" class="text-sm text-gray-600 hover:text-blue-700"> --}}
+                    <a href="{{ route('lupapass') }}" class="text-sm text-gray-600 hover:text-blue-700">
                     Lupa Kata Sandi?
                     </a>
                 </div>

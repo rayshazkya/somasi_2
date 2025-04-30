@@ -25,3 +25,7 @@ Route::get('/daftarAnggota', function () {
 Route::get('/login', function () {
    return view('ketua.login');
 })->name('login');
+
+Route::get('/lupaPassword', function () {
+   return view('ketua.lupapass');
+})->name('lupapass');
