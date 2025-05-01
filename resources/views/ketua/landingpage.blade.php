@@ -105,54 +105,55 @@
     </section>
 
     <!-- Form Section -->
-    <section id="daftar" class="py-12 md:py-24 bg-blue-50 relative overflow-hidden">
-        <div class="container mx-auto px-4 relative">
-            <div class="flex flex-col md:flex-row items-center md:items-start">
-                <!-- Bagian teks di sebelah kiri -->
-                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12 md:pt-16 text-center">
-                    <h2 class="text-blue-700 font-bold text-3xl md:text-4xl mb-4">Kami sangat menghargai partisipasimu disini!</h2>
-                    <p class="text-gray-600 text-lg">
-                        Silahkan isi formulir pendaftaran anggota dan tunggu informasi selanjutnya
-                    </p>
+    <section id="daftar" class="py-10 md:py-20 bg-blue-50 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto rounded-xl overflow-hidden py-10" style="background-image: url('{{ asset('images/bgpattern.png') }}'); background-size: cover; background-position: center; background-color: #ebf2ff;">
+                <div class="flex flex-col md:flex-row items-center md:items-start">
+                    <!-- Bagian teks di sebelah kiri -->
+                    <div class="md:w-1/2 px-8 md:px-16 flex flex-col justify-center text-center">
+                    <h2 class="text-blue-900 font-bold text-3xl md:text-3xl mb-4">Kami sangat menghargai partisipasimu disini!</h2>
+                        <p class="text-gray-600 text-lg">
+                            Silahkan isi formulir pendaftaran anggota dan tunggu informasi selanjutnya
+                        </p>
+                    </div>
+                    
+                    <!-- Bagian form di sebelah kanan -->
+                    <div class="md:w-1/2 p-8 md:p-16 md:p-10">
+                        <form class="space-y-4 max-w-md">
+                            <div>
+                                <input type="text" name="nama" placeholder="Masukkan Nama" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <input type="text" name="npm" placeholder="Masukkan NPM" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <input type="text" name="telepon" placeholder="Masukkan Nomor HP" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <input type="email" name="email" placeholder="Masukkan Email" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <select name="divisi" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-400" required>
+                                    <option value="" selected disabled>Pilihan Divisi Yang Diminati</option>
+                                    <option value="ppm">Penelitian dan Pengembangan Mahasiswa (PPM)</option>
+                                    <option value="kominkraf">Komunikasi, Informasi dan Perencanaan Kreativitas (KOMINKRAF)</option>
+                                    <option value="mba">Minat Bakat dan Apresiasi (MBA)</option>
+                                    <option value="hual">Hubungan Antar Lembaga (HUAL)</option>
+                                    <option value="pkm">Pengelolaan Kesejahteraan Mahasiswa (PKM)</option>
+                                    <option value="adm">ADM dan Inventaris</option>
+                                    <option value="agama">Keagamaan</option>
+                                    <option value="sosmas">Sosial Masyarakat (SOSMAS)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <textarea name="alasan" placeholder="Alasan Ingin Bergabung" rows="3" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                            </div>
+                            <div class="pt-2">
+                                <button type="submit" class="px-3 py-1 bg-blue-600 text-white text-lg font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md">Kirim</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                
-                <!-- Bagian form di sebelah kanan -->
-                <div class="md:w-1/2 w-full">
-                    <form class="space-y-6 max-w-lg mx-auto md:mx-0">
-                        <div>
-                            <input type="text" name="nama" placeholder="Masukkan Nama" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div>
-                            <input type="text" name="npm" placeholder="Masukkan NPM" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div>
-                            <input type="text" name="telepon" placeholder="Masukkan Nomor HP" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div>
-                            <input type="email" name="email" placeholder="Masukkan Email" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                        </div>
-                        <div>
-                            <select name="divisi" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-400" required>
-                                <option value="" selected disabled>Pilihan Divisi Yang Diminati</option>
-                                <option value="ppm">Penelitian dan Pengembangan Mahasiswa (PPM)</option>
-                                <option value="kominkraf">Komunikasi, Informasi dan Perencanaan Kreativitas (KOMINKRAF)</option>
-                                <option value="mba">Minat Bakat dan Apresiasi (MBA)</option>
-                                <option value="hual">Hubungan Antar Lembaga (HUAL)</option>
-                                <option value="pkm">Pengelolaan Kesejahteraan Mahasiswa (PKM)</option>
-                                <option value="adm">ADM dan Inventaris</option>
-                                <option value="agama">Keagamaan</option>
-                                <option value="sosmas">Sosial Masyarakat (SOSMAS)</option>
-                            </select>
-                        </div>
-                        <div>
-                            <textarea name="alasan" placeholder="Alasan Ingin Bergabung" rows="3" class="w-full px-4 py-3 rounded-md bg-white border-0 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
-                        </div>
-                        <div>
-                            <button type="submit" class="w-40 bg-blue-700 text-white py-3 rounded-md hover:bg-blue-800 font-medium">Kirim</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
     </section>
     
