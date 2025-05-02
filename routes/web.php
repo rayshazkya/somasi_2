@@ -28,4 +28,12 @@ Route::get('/login', function () {
 
 Route::get('/lupaPassword', function () {
    return view('ketua.lupapass');
-})->name('lupapass');
+})->name('lupaPassword');
+
+Route::get('/otp', function () {
+   return view('ketua.otp'); 
+})->name('otp');
+
+Route::get('/ubahPassword', function () {
+   return view('ketua.ubahpass'); 
+})->name('ubahPassword');

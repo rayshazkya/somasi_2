@@ -57,7 +57,7 @@
             <!-- Judul Tentang SOMASI -->
             <div class="flex justify-center mb-8">
                 <div class="bg-blue-50 rounded-lg px-6 py-2 shadow-md">
-                    <p class="text-blue-700 font-medium">Tentang SOMASI</p>
+                    <p class="text-blue-600 font-medium">Tentang SOMASI</p>
                 </div>
             </div>
             
@@ -158,22 +158,46 @@
     </section>
     
     <!-- FAQ Section -->
-    <section id="faq" class="max-w-5xl mx-auto py-12 px-4">
-        <div class="flex justify-center mb-8">
-            <div class="bg-blue-50 rounded-lg px-6 py-2 shadow-md">
-                <p class="text-blue-600 font-medium">Frequently Ask Question</p>
+    <section id="faq" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <!-- Judul FAQ -->
+            <div class="text-center mb-4">
+                <div class="inline-block bg-blue-50 rounded-lg px-6 py-2">
+                    <p class="text-blue-600 font-medium">Frequently Ask Question</p>
+                </div>
             </div>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white shadow-md rounded p-6">
-                <h5 class="font-semibold mb-2">Siapa yang bisa menggunakan SOMASI?</h5>
-                <p class="text-sm text-gray-600">Ketua, bendahara, pengurus divisi, dan anggota biasa - masing-masing
-                    dengan akses yang disesuaikan.</p>
+            
+            <!-- Subtitle -->
+            <h2 class="text-center text-blue-900 font-bold text-3xl md:text-4xl mb-16">Silahkan Cek Pertanyaan-Pertanyaan Yang Dapat Membantu Kamu</h2>
+            
+            <!-- FAQ Cards -->
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- FAQ Card 1 -->
+                <div class="border border-gray-200 rounded-lg p-8">
+                    <h3 class="text-blue-900 font-bold text-2xl mb-4">Siapa yang bisa menggunakan SOMASI?</h3>
+                    <p class="text-gray-600 mb-6">
+                        Ketua, bendahara, pengurus divisi, dan anggota biasa – masing-masing dengan akses yang disesuaikan.
+                    </p>
+                    <a href="#" class="text-indigo-400 font-medium">
+                        Learn More »
+                    </a>
+                </div>
+                
+                <!-- FAQ Card 2 -->
+                <div class="border border-gray-200 rounded-lg p-8">
+                    <h3 class="text-blue-900 font-bold text-2xl mb-4">Fitur apa saja yang tersedia?</h3>
+                    <p class="text-gray-600 mb-6">
+                        Manajemen anggota, keuangan, kalender kegiatan, presensi kegiatan, dan arsip dokumen.
+                    </p>
+                    <a href="#" class="text-indigo-400 font-medium">
+                        Learn More »
+                    </a>
+                </div>
             </div>
-            <div class="bg-white shadow-md rounded p-6">
-                <h5 class="font-semibold mb-2">Fitur apa saja yang tersedia?</h5>
-                <p class="text-sm text-gray-600">Manajemen anggota, keuangan, kalender kegiatan, presensi kegiatan, dan
-                    arsip dokumen.</p>
+            
+            <!-- Lihat Pertanyaan Lainnya -->
+            <div class="text-center">
+                <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition-colors">Lihat Pertanyaan Lainnya</a>
             </div>
         </div>
     </section>

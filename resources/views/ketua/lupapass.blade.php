@@ -49,7 +49,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                {{-- <a href="/ketuaDashboard"> --}}
+                <a href="/otp">
                     <button type="submit"
                         class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition duration-200">
                         KIRIM KODE OTP
