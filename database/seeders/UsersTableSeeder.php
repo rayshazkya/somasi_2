@@ -18,36 +18,44 @@ class UsersTableSeeder extends Seeder
             'role' => 'admin',
         ]);
 
-        // Kepala Sekolah
+        // Dph
         User::create([
-            'name' => 'Kepala Sekolah',
-            'email' => 'kepsek@example.com',
+            'name' => 'Glen Hakim',
+            'email' => 'dph@example.com',
             'password' => Hash::make('password'),
-            'role' => 'kepala_sekolah',
+            'role' => 'dph_role',
         ]);
 
-        // Wakil Kurikulum
+        // Bendum
         User::create([
-            'name' => 'Wakil Kurikulum',
-            'email' => 'wakur@example.com',
+            'name' => 'Shopia Nurul Huda',
+            'email' => 'bendahara@example.com',
             'password' => Hash::make('password'),
-            'role' => 'wakil_kurikulum',
+            'role' => 'bendahara_role',
         ]);
 
-        // Guru
+        // Kadiv
         User::create([
-            'name' => 'Guru',
-            'email' => 'guru@example.com',
+            'name' => 'M. Syahidal Akbar Zas',
+            'email' => 'syahid22@mhs.usk.ac.id',
             'password' => Hash::make('password'),
-            'role' => 'guru',
+            'role' => 'kadiv_role',
         ]);
 
-        // Siswa
+        // Anggota
         User::create([
-            'name' => 'Siswa',
-            'email' => 'siswa@example.com',
+            'name' => 'Ade Riski',
+            'email' => 'anggota@example.com',
             'password' => Hash::make('password'),
-            'role' => 'siswa',
+            'role' => 'anggota_role',
+        ]);
+
+        // ex
+        User::create([
+            'name' => 'Kadiv',
+            'email' => 'kadiv@example.com',
+            'password' => Hash::make('password'),
+            'role' => 'kadiv_role',
         ]);
     }
 }

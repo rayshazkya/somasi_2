@@ -168,7 +168,7 @@
 
 @section('content')
     <div class="bg-white rounded-lg shadow p-6">
-        <h2 class="text-xl font-semibold mb-4">Selamat Datang di Dashboard Admin</h2>
-        <p>Ini adalah dashboard untuk Admin</p>
+        <h2 class="text-xl font-semibold mb-4">Selamat Datang di Dashboard DPH</h2>
+        <p>Ini adalah dashboard untuk DPH</p>
     </div>
 @endsection

@@ -1,47 +1,83 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+<!DOCTYPE html>
+<html lang="en">
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMASI - Login</title>
+    @vite('resources/css/app.css')
+</head>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+<body class="bg-white">
+    <div class="flex min-h-screen">
+        <!-- Left Side - Login Form -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center items-center px-6 md:px-16 lg:px-24">
+            <div class="w-full max-w-md">
+
+                <!-- Logo -->
+                <div class="mb-8 text-center">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-12 mx-auto">
+                </div>
+
+                <!-- Welcome Text -->
+                <h1 class="text-3xl font-bold text-navy-900 mb-2 text-center">Selamat Datang!!</h1>
+                <p class="text-gray-600 mb-8 text-center">Masukkan data kamu untuk masuk</p>
+
+                <!-- Login Form -->
+                <form method="POST" action="{{ route('login') }}">
+                    @csrf
+
+                    <!-- NPM Field -->
+                    <div class="mb-4">
+                        <input id="email" name="email" type="text" placeholder="Email"
+                            class="w-full px-4 py-3 rounded-lg shadow-sm border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                            value="{{ old('email') }}" required autofocus>
+                        @error('email')
+                            <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Password Field -->
+                    <div class="mb-2">
+                        <input id="password" name="password" type="password" placeholder="Kata Sandi"
+                            class="w-full px-4 py-3 rounded-lg shadow-sm border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                            required>
+                        @error('password')
+                            <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <!-- Forgot Password -->
+                    <div class="mb-6 text-right">
+                        @if (Route::has('password.request'))
+                            <a href="{{ route('password.request') }}" class="text-sm text-gray-600 hover:text-blue-700">
+                                Lupa Kata Sandi?
+                            </a>
+                        @endif
+                    </div>
+
+                    <!-- Login Button -->
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-lg transition duration-200">
+                        MASUK
+                    </button>
+                </form>
+
+                <!-- Role Buttons (Optional Dummy Links) -->
+
+            </div>
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        <!-- Right Side -->
+        <div
+            class="rounded-tl-4xl hidden md:flex md:w-1/2 bg-gradient-to-b from-blue-600 to-white flex-col justify-center items-center text-white px-12">
+            <div class="text-center">
+                <img src="{{ asset('images/logo-putih.png') }}" alt="Logo" class="h-16 mx-auto mb-8">
+                <h2 class="text-5xl font-bold mb-6">SOMASI</h2>
+                <p class="text-xl">"Satu platform untuk seluruh aktivitas organisasi mahasiswa."</p>
+            </div>
         </div>
+    </div>
+</body>
 
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</html>

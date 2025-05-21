@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100">
     <div class="min-h-screen flex">
         <!-- Sidebar -->
         <div class="bg-gray-800 text-white w-64 py-6 flex flex-col">
             <div class="px-6 mb-8">
-                <h2 class="text-2xl font-semibold">Sekolah App</h2>
+                <h2 class="text-2xl font-semibold">Sekolah Apsp</h2>
                 <p class="text-gray-400">@yield('role-name')</p>
             </div>
             <nav class="flex-1 px-4">
@@ -31,7 +33,7 @@
                 </form>
             </div>
         </div>
-        
+
         <!-- Main Content -->
         <div class="flex-1">
             <!-- Top Navigation -->
@@ -41,7 +43,7 @@
                     <span>{{ Auth::user()->name }}</span>
                 </div>
             </div>
-            
+
             <!-- Content -->
             <div class="container mx-auto px-6 py-8">
                 @yield('content')
@@ -49,4 +51,5 @@
         </div>
     </div>
 </body>
+
 </html>
